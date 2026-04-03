@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – CanisMentor</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    color: #222;
+}
+
+header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+button.lang-switch {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+h1 { font-size: 32px; margin-bottom: 30px; }
+h2 { margin-top: 35px; font-size: 22px; }
+p { margin-top: 10px; }
+ul { margin-top: 10px; padding-left: 20px; }
+li { margin-bottom: 6px; }
+footer { margin-top: 50px; font-size: 14px; color: #666; }
+.lang { display: none; }
+.lang.active { display: block; }
+</style>
+
+</head>
+<body>
+
+<header>
+<button class="lang-switch" onclick="switchLang('de')">Deutsch</button>
+<button class="lang-switch" onclick="switchLang('en')">English</button>
+</header>
+
+<!-- German Content -->
+<div class="lang" id="de">
+<h1>Datenschutzerklärung</h1>
+
+<h2>1. Verantwortlicher</h2>
+<p>
+Marc Busch<br>
+Adresse<br>
+PLZ Ort<br>
+Deutschland<br>
+</p>
+<p>E-Mail: <span id="email-de"></span></p>
+
+<script>
+(function() {
+  const user = "canismentorapp";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("email-de").appendChild(link);
+})();
+</script>
+
+<h2>2. Beschreibung der App</h2>
+<p>
+Die App <strong>CanisMentor</strong> bietet eine KI-gestützte Analyse von Hundeverhalten anhand von Videos sowie Trainingsvorschläge und Lerninhalte.
+</p>
+
+<h2>3. Registrierung und Nutzerkonto</h2>
+<p>
+Zur Nutzung bestimmter Funktionen kann ein Nutzerkonto erstellt werden, dabei werden folgende Daten verarbeitet:
+</p>
+<ul>
+<li>E-Mail-Adresse</li>
+<li>Passwort (verschlüsselt gespeichert)</li>
+</ul>
+<p>
+Diese Daten ermöglichen den Zugang zum Nutzerkonto.
+</p>
+
+<h2>4. Hochgeladene Inhalte</h2>
+<p>
+Nutzer können Videos oder Texte zur Analyse hochladen. Diese Inhalte werden verarbeitet, um KI-gestützte Analysen und Trainingsvorschläge zu erstellen.
+</p>
+<p>
+Die Inhalte können gespeichert werden, damit Nutzer später auf ihre Analysen zugreifen können.
+</p>
+
+<h2>5. Nutzung von KI-Diensten</h2>
+
+<p>
+Zur Analyse von Hundeverhalten nutzt die App KI-Dienste,
+insbesondere das Modell <strong>Gemini Flash</strong> von Google.
+</p>
+
+<p>
+Dabei können folgende Daten verarbeitet werden:
+</p>
+
+<ul>
+<li>hochgeladene Videos oder Bilder</li>
+<li>Texteingaben des Nutzers</li>
+<li>Analysebezogene Metadaten</li>
+</ul>
+
+<p>
+Die Verarbeitung erfolgt ausschließlich zur Erstellung von
+Analyseergebnissen und Trainingsvorschlägen innerhalb der App.
+</p>
+
+<p>
+Die übermittelten Inhalte werden nicht zum Training von KI-Modellen verwendet.
+</p>
+
+<p>
+Der KI-Dienst wird über Server von Google bereitgestellt.
+Dabei kann eine Verarbeitung von Daten außerhalb der Europäischen Union erfolgen.
+Google verpflichtet sich zur Einhaltung der geltenden Datenschutzvorschriften.
+</p>
+
+<h2>6. Speicherung von Daten</h2>
+<p>Wir speichern bestimmte Daten, um Ihnen die Nutzung unserer App zu ermöglichen und die angebotenen Funktionen zu verbessern. Dazu gehören insbesondere:</p>
+<ul>
+<li>Nutzerkontodaten, die Sie bei der Registrierung oder Nutzung Ihres Kontos angeben.</li>
+<li>Analyseergebnisse, die durch die Verarbeitung Ihrer Aktivitäten und Inhalte entstehen.</li>
+<li>Verhaltensmuster aus den Analysen.</li>
+<li>Chatverläufe sowie Erkenntnisse aus Chatverläufen, um individuelle Empfehlungen und Inhalte zu verbessern.</li>
+<li>Erstellte Pläne, Übungen und Übungsfeedback sowie Trainingsfortschritt, um Ihren Lern- und Trainingsverlauf zu dokumentieren und weiterzuentwickeln.</li>
+</ul>
+
+<p>Wir verwenden diese Daten ausschließlich zur Verbesserung der App-Funktionen, zur Anpassung von Trainingsplänen und zur Optimierung Ihrer Nutzererfahrung.</p>
+
+<h2>7. Nutzung von Firebase-Diensten</h2>
+
+<p>
+Die App nutzt Dienste der Plattform <strong>Firebase</strong> der Google Ireland Limited,
+Gordon House, Barrow Street, Dublin 4, Irland.
+Firebase ist eine Entwicklungsplattform, die verschiedene Cloud-Dienste für mobile Anwendungen bereitstellt.
+</p>
+
+<h3>Firebase Authentication</h3>
+<p>
+Zur Registrierung und Anmeldung von Nutzern wird <strong>Firebase Authentication</strong> verwendet.
+Dabei werden folgende Daten verarbeitet:
+</p>
+
+<ul>
+<li>E-Mail-Adresse</li>
+<li>verschlüsseltes Passwort</li>
+<li>technische Identifikationsdaten des Nutzerkontos</li>
+</ul>
+
+<p>
+Die Verarbeitung erfolgt ausschließlich zum Zweck der sicheren Anmeldung
+und Verwaltung des Nutzerkontos.
+</p>
+
+<h3>Firebase Storage</h3>
+<p>
+Zur Speicherung von durch Nutzer hochgeladenen Inhalten
+(z. B. Videos oder Bilder zur Analyse) nutzt die App <strong>Firebase Storage</strong>.
+</p>
+
+<p>
+Dabei können folgende Daten gespeichert werden:
+</p>
+
+<ul>
+<li>hochgeladene Videos oder Bilder</li>
+<li>Analyseergebnisse</li>
+<li>technische Metadaten</li>
+</ul>
+
+<p>
+Die Speicherung erfolgt, damit Nutzer auf ihre Inhalte und Analysen
+innerhalb der App zugreifen können.
+</p>
+
+<p>
+Weitere Informationen zum Datenschutz bei Google:
+https://policies.google.com/privacy
+</p>
+
+<h2>8. Löschung des Nutzerkontos</h2>
+<p>
+Nutzer können jederzeit die Löschung ihres Kontos verlangen.
+</p>
+
+<h2>9. Rechtsgrundlage</h2>
+<ul>
+<li>Art. 6 Abs. 1 lit. b DSGVO – Bereitstellung der App-Funktionen</li>
+<li>Art. 6 Abs. 1 lit. f DSGVO – Verbesserung der App</li>
+</ul>
+
+<h2>10. Rechte der Nutzer</h2>
+<ul>
+<li>Auskunft</li>
+<li>Berichtigung</li>
+<li>Löschung</li>
+<li>Einschränkung der Verarbeitung</li>
+<li>Datenübertragbarkeit</li>
+</ul>
+
+<h2>11. Datensicherheit</h2>
+<p>
+Technische und organisatorische Maßnahmen werden eingesetzt, um personenbezogene Daten zu schützen.
+</p>
+
+<h2>12. Änderungen</h2>
+<p>
+Diese Datenschutzerklärung kann angepasst werden, wenn neue Funktionen in der App eingeführt werden.
+</p>
+
+<footer>
+<p>Stand: März 2026</p>
+</footer>
+</div>
+
+<!-- English Content -->
+<div class="lang" id="en">
+<h1>Privacy Policy</h1>
+
+<h2>1. Controller</h2>
+<p>
+Marc Busch<br>
+Adresse<br>
+PLZ Ort<br>
+Germany<br>
+</p>
+<p>E-Mail: <span id="email-en"></span></p>
+
+<script>
+(function() {
+  const user = "canismentorapp";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("email-en").appendChild(link);
+})();
+</script>
+
+<h2>2. Description of the App</h2>
+<p>
+The <strong>CanisMentor</strong> app provides AI-based analysis of dog behavior from videos as well as training suggestions and learning content.
+</p>
+
+<h2>3. Registration and User Account</h2>
+<p>
+Certain features require a user account, for which the following data is processed:
+</p>
+<ul>
+<li>Email address</li>
+<li>Password (stored encrypted)</li>
+</ul>
+<p>
+These data enable access to the user account.
+</p>
+
+<h2>4. Uploaded Content</h2>
+<p>
+Users can upload videos or text for analysis. These contents are processed to generate AI-based analyses and training suggestions.
+</p>
+<p>
+The content may be stored so that users can access their analyses later.
+</p>
+
+<h2>5. Use of AI Services</h2>
+
+<p>
+To analyze dog behavior, the app uses artificial intelligence services,
+in particular the <strong>Gemini Flash</strong> model provided by Google.
+</p>
+
+<p>
+The following data may be processed:
+</p>
+
+<ul>
+<li>uploaded videos or images</li>
+<li>user text input</li>
+<li>analysis-related metadata</li>
+</ul>
+
+<p>
+The processing is carried out solely to generate analysis results
+and training recommendations within the app.
+</p>
+
+<p>
+User content submitted for analysis is not used to train AI models.
+</p>
+
+<p>
+The AI service is provided via Google servers.
+This may involve processing data outside the European Union.
+Google commits to complying with applicable data protection regulations.
+</p>
+
+<h2>6. Data Storage</h2>
+<p>
+We store certain data to enable the use of our app and to improve the services offered. This includes, in particular:
+</p>
+<ul>
+  <li>User account data provided during registration or account usage.</li>
+  <li>Analysis results generated from processing your activities and content.</li>
+  <li>Behavior patterns from analyses.</li>
+  <li>Chat histories and insights from chat histories to enhance personalized recommendations and content.</li>
+  <li>Created plans, exercises and exercise feedback, and training progress to document and develop your learning and training experience.</li>
+</ul>
+
+<p>
+These data are used solely to improve app functionality, customize training plans, and optimize your user experience.
+</p>
+
+<h2>7. Use of Firebase Services</h2>
+
+<p>
+The app uses services of the platform <strong>Firebase</strong>,
+provided by Google Ireland Limited,
+Gordon House, Barrow Street, Dublin 4, Ireland.
+Firebase is a development platform that provides various cloud services for mobile applications.
+</p>
+
+<h3>Firebase Authentication</h3>
+
+<p>
+<strong>Firebase Authentication</strong> is used for user registration and login.
+The following data may be processed:
+</p>
+
+<ul>
+<li>email address</li>
+<li>encrypted password</li>
+<li>technical identifiers related to the user account</li>
+</ul>
+
+<p>
+This data is processed solely for secure authentication
+and management of the user account.
+</p>
+
+<h3>Firebase Storage</h3>
+
+<p>
+User-uploaded content (for example videos or images for analysis)
+may be stored using <strong>Firebase Storage</strong>.
+</p>
+
+<p>
+The following data may be stored:
+</p>
+
+<ul>
+<li>uploaded videos or images</li>
+<li>analysis results</li>
+<li>technical metadata</li>
+</ul>
+
+<p>
+Storage is necessary so that users can access their content and analyses
+within the app.
+</p>
+
+<p>
+Further information about Google's privacy practices:
+https://policies.google.com/privacy
+</p>
+
+<h2>8. Deletion of User Account</h2>
+<p>
+Users can request deletion of their account at any time.
+</p>
+
+<h2>9. Legal Basis</h2>
+<ul>
+<li>Art. 6 para. 1 lit. b GDPR – Provision of app functions</li>
+<li>Art. 6 para. 1 lit. f GDPR – Improvement of the app</li>
+</ul>
+
+<h2>10. User Rights</h2>
+<ul>
+<li>Access</li>
+<li>Rectification</li>
+<li>Deletion</li>
+<li>Restriction of processing</li>
+<li>Data portability</li>
+</ul>
+
+<h2>11. Data Security</h2>
+<p>
+Technical and organizational measures are used to protect personal data.
+</p>
+
+<h2>12. Changes</h2>
+<p>
+This privacy policy may be updated when new features are added to the app.
+</p>
+
+<footer>
+<p>Version: March 2026</p>
+</footer>
+</div>
+
+<script>
+function switchLang(lang){
+
+document.querySelectorAll('.lang').forEach(el => {
+el.classList.remove('active');
+});
+
+document.getElementById(lang).classList.add('active');
+
+}
+
+// URL Parameter lesen
+const params = new URLSearchParams(window.location.search);
+const langParam = params.get("lang");
+
+if(langParam === "de" || langParam === "en"){
+switchLang(langParam);
+} else {
+
+// Fallback: Browser-Sprache
+const userLang = navigator.language || navigator.userLanguage;
+
+if(userLang.startsWith('de')){
+switchLang('de');
+} else {
+switchLang('en');
+}
+
+}
+</script>
+
+</body>
+</html>
