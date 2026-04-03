@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CanisMentor – Deine digitale Hundeschule</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f8fafc;
+color:#1c1c1c;
+}
+
+/* language */
+
+.lang{
+display:none;
+}
+
+.lang.active{
+display:block;
+}
+
+/* language switcher */
+
+.lang-switch{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+padding:8px 14px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-weight:600;
+z-index:10;
+}
+
+.lang-switch a{
+text-decoration:none;
+color:#01998D;
+margin:0 4px;
+}
+
+/* layout */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* hero */
+
+.hero{
+background:linear-gradient(135deg,#01998D,#016e66);
+color:white;
+padding:120px 20px;
+}
+
+.hero-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+max-width:1200px;
+margin:auto;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.cta{
+margin-top:30px;
+}
+
+.button{
+background:white;
+color:#01998D;
+padding:14px 26px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+}
+
+/* iphone mockup */
+
+.phone{
+width:280px;
+border-radius:40px;
+background:black;
+padding:10px;
+box-shadow:0 30px 60px rgba(0,0,0,0.3);
+}
+
+.phone img{
+width:100%;
+border-radius:30px;
+}
+
+/* features */
+
+.features{
+padding:100px 20px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feature h3{
+margin-bottom:10px;
+}
+
+/* screenshots */
+
+.screens{
+padding:100px 20px;
+text-align:center;
+}
+
+.screenshot-row{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.screenshot{
+width:230px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* download */
+
+.download{
+background:#01998D;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.download h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.store-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.store-buttons img{
+height:55px;
+}
+
+/* footer */
+
+.footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+color:#777;
+}
+
+/* compare table */
+
+.compare-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.compare-section h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:#666;
+  margin-bottom:40px;
+}
+
+.table-wrapper{
+  overflow-x:auto;
+}
+
+.compare-table{
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  border-collapse:collapse;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.compare-table th,
+.compare-table td{
+  padding:16px;
+  border-bottom:1px solid #eee;
+  font-size:16px;
+}
+
+.compare-table th{
+  font-weight:600;
+}
+
+.compare-table td:first-child{
+  text-align:left;
+  color:#444;
+}
+
+.compare-table td{
+  text-align:center;
+}
+
+.compare-table thead th.canis{
+  background:#f3fbfa;
+}
+
+.compare-table td.canis{
+  color:#01998D;
+  font-weight:700;
+}
+
+.compare-table tr:last-child td{
+  border-bottom:none;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+
+.hero-inner{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+}
+
+@media(max-width:600px){
+
+.compare-section h2{
+  font-size:28px;
+}
+
+.compare-table th,
+.compare-table td{
+  padding:12px;
+  font-size:14px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="lang-switch">
+<a href="?lang=de">DE</a> |
+<a href="?lang=en">EN</a>
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div>
+
+<h1>
+
+<span class="lang" id="de">
+Individuelles Hundetraining mit KI
+</span>
+
+<span class="lang" id="en">
+AI-powered dog training
+</span>
+
+</h1>
+
+<p>
+
+<span class="lang" id="de">
+CanisMentor erstellt personalisierte Trainingspläne für dich und deinen Hund.
+Die KI berücksichtigt Rasse, Alter, Trainingsstand, bekannte Herausforderungen
+und deinen bevorzugten Trainingsort.
+</span>
+
+<span class="lang" id="en">
+CanisMentor creates personalized training plans for you and your dog.
+The AI considers breed, age, training level, known challenges
+and your preferred training environment.
+</span>
+
+</p>
+
+<div class="cta">
+
+<a class="button">
+
+<span class="lang" id="de">App laden</span>
+<span class="lang" id="en">Download App</span>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="phone">
+<img src="screenshot1.png">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMPARE -->
+
+<section class="compare-section">
+  <h2>
+    <span class="lang" id="de">Warum CanisMentor?</span>
+    <span class="lang" id="en">Why CanisMentor?</span>
+  </h2>
+  <p class="subtitle">
+    <span class="lang" id="de">Der Unterschied ist einfach.</span>
+    <span class="lang" id="en">The difference is simple.</span>
+  </p>
+
+  <div class="table-wrapper">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="canis">CanisMentor</th>
+          <th>
+            <span class="lang" id="de">Andere Hunde-Apps</span>
+            <span class="lang" id="en">Other Dog Apps</span>
+          </th>
+          <th>
+            <span class="lang" id="de">Hundeschule</span>
+            <span class="lang" id="en">Dog School</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="lang" id="de">Individuelle Trainingspläne</span>
+            <span class="lang" id="en">Individual Training Plans</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✕</td>
+          <td>△</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Analyse von Verhalten</span>
+            <span class="lang" id="en">Behavior Analysis</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✕</td>
+          <td>✓</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Sofortiges Feedback</span>
+            <span class="lang" id="en">Instant Feedback</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✕</td>
+          <td>✕</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">KI-Coach für Fragen</span>
+            <span class="lang" id="en">AI Coach for Questions</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✕</td>
+          <td>✕</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Individuelle Übungen</span>
+            <span class="lang" id="en">Individual Exercises</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✕</td>
+          <td>△</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Fortschrittsanalyse</span>
+            <span class="lang" id="en">Progress Analysis</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>△</td>
+          <td>✕</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Training jederzeit</span>
+            <span class="lang" id="en">Training Anytime</span>
+          </td>
+          <td class="canis">✓</td>
+          <td>✓</td>
+          <td>✕</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="lang" id="de">Kosten</span>
+            <span class="lang" id="en">Cost</span>
+          </td>
+          <td class="canis">
+            <span class="lang" id="de">~10–20 €/Monat</span>
+            <span class="lang" id="en">~€10–20/month</span>
+          </td>
+          <td>
+            <span class="lang" id="de">~10–20 €/Monat</span>
+            <span class="lang" id="en">~€10–20/month</span>
+          </td>
+          <td>
+            <span class="lang" id="de">200–400 €/Monat</span>
+            <span class="lang" id="en">€200–400/month</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features container">
+
+<h2 style="text-align:center;font-size:34px;">
+
+<span class="lang" id="de">
+Trainingspläne, die wirklich zu deinem Hund passen
+</span>
+
+<span class="lang" id="en">
+Training plans tailored to your dog
+</span>
+
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+
+<h3>🐕</h3>
+
+<p>
+
+<span class="lang" id="de">
+Die KI analysiert Alter, Rasse und Trainingsstand deines Hundes
+und erstellt darauf basierend einen individuellen Trainingsplan.
+</span>
+
+<span class="lang" id="en">
+The AI analyzes your dog's age, breed and training level
+to generate an individualized training plan.
+</span>
+
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📅</h3>
+
+<p>
+
+<span class="lang" id="de">
+Trainingspläne passen sich automatisch an Fortschritt,
+Feedback und Trainingsverlauf an.
+</span>
+
+<span class="lang" id="en">
+Training plans adapt automatically based on progress,
+feedback and training history.
+</span>
+
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🎥</h3>
+
+<p>
+
+<span class="lang" id="de">
+Lade Trainingsvideos hoch und erhalte detailliertes
+KI-Feedback zu Timing und Körpersprache.
+</span>
+
+<span class="lang" id="en">
+Upload training videos and receive detailed
+AI feedback about timing and body language.
+</span>
+
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📍</h3>
+
+<p>
+
+<span class="lang" id="de">
+Die KI berücksichtigt deine Trainingsumgebung –
+Wohnung, Garten oder Hundeplatz.
+</span>
+
+<span class="lang" id="en">
+The AI adapts to your training environment –
+home, garden or training field.
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SCREENSHOTS -->
+
+<section class="screens">
+
+<h2>
+
+<span class="lang" id="de">Ein Blick in die App</span>
+<span class="lang" id="en">Inside the App</span>
+
+</h2>
+
+<div class="screenshot-row">
+
+<img class="screenshot" src="screenshot1.png">
+<img class="screenshot" src="screenshot2.png">
+<img class="screenshot" src="screenshot3.png">
+
+</div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="download">
+
+<h2>
+
+<span class="lang" id="de">Starte dein Training heute</span>
+<span class="lang" id="en">Start your training today</span>
+
+</h2>
+
+<p>
+
+<span class="lang" id="de">
+Verbessere dein Hundetraining mit personalisierten KI-Trainingsplänen.
+</span>
+
+<span class="lang" id="en">
+Improve your dog training with personalized AI training plans.
+</span>
+
+</p>
+
+<div class="store-buttons">
+
+<img src="appstore.png">
+<img src="playstore.png">
+
+</div>
+
+</section>
+
+
+<div class="footer">
+
+© 2026 CanisMentor
+
+<br><br>
+
+<a href="imprint.html">Impressum</a> |
+<a href="privacy-policy.html">Datenschutz</a> |
+<a href="terms-of-service.html">Terms</a>
+
+</div>
+
+
+<script>
+
+function switchLang(lang){
+
+document.querySelectorAll('.lang').forEach(el => {
+el.classList.remove('active');
+});
+
+document.querySelectorAll('#'+lang).forEach(el=>{
+el.classList.add('active');
+});
+
+}
+
+const params = new URLSearchParams(window.location.search);
+const langParam = params.get("lang");
+
+if(langParam === "de" || langParam === "en"){
+switchLang(langParam);
+}else{
+
+const userLang = navigator.language || navigator.userLanguage;
+
+if(userLang.startsWith('de')){
+switchLang('de');
+}else{
+switchLang('en');
+}
+
+}
+
+</script>
+
+</body>
+</html>
