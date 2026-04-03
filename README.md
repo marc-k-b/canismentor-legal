@@ -1,2 +1,0 @@
-# canismentor-legal
-CanisMentor Legal
