@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CanisMentor – Rechtliche Hinweise</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 0 20px;
+    color: #222;
+    text-align: center;
+}
+
+header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+button.lang-switch {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+h1 { 
+    font-size: 32px; 
+    margin-bottom: 40px; 
+}
+
+a {
+    display: block;
+    margin: 15px 0;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0a9a8d;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+a:hover {
+    background-color: #08766f;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+}
+
+.lang { display: none; }
+.lang.active { display: block; }
+
+</style>
+</head>
+
+<body>
+
+<header>
+<button class="lang-switch" onclick="switchLang('de')">Deutsch</button>
+<button class="lang-switch" onclick="switchLang('en')">English</button>
+</header>
+
+
+<!-- Deutsch -->
+<div class="lang" id="de">
+
+<h1>CanisMentor <br> Rechtliche Hinweise</h1>
+
+<a href="https://marc-k-b.github.io/canismentor-legal/imprint?lang=de" target="_blank">Impressum</a>
+<a href="https://marc-k-b.github.io/canismentor-legal/privacy-policy?lang=de" target="_blank">Datenschutzerklärung</a>
+<a href="https://marc-k-b.github.io/canismentor-legal/terms-of-service?lang=de" target="_blank">Nutzungsbedingungen</a>
+
+<footer>
+<p>Stand: März 2026</p>
+</footer>
+
+</div>
+
+
+<!-- English -->
+<div class="lang" id="en">
+
+<h1>CanisMentor <br> Legal Information</h1>
+
+<a href="https://marc-k-b.github.io/canismentor-legal/imprint?lang=en" target="_blank">Imprint / Legal Notice</a>
+<a href="https://marc-k-b.github.io/canismentor-legal/privacy-policy?lang=en" target="_blank">Privacy Policy</a>
+<a href="https://marc-k-b.github.io/canismentor-legal/terms-of-service?lang=en" target="_blank">Terms of Service</a>
+
+<footer>
+<p>Last updated: March 2026</p>
+</footer>
+
+</div>
+
+
+<script>
+
+function switchLang(lang){
+
+document.querySelectorAll('.lang').forEach(el => {
+el.classList.remove('active');
+});
+
+document.getElementById(lang).classList.add('active');
+
+}
+
+// URL Parameter lesen
+const params = new URLSearchParams(window.location.search);
+const langParam = params.get("lang");
+
+if(langParam === "de" || langParam === "en"){
+switchLang(langParam);
+} else {
+
+const userLang = navigator.language || navigator.userLanguage;
+
+if(userLang.startsWith('de')){
+switchLang('de');
+} else {
+switchLang('en');
+}
+
+}
+
+</script>
+
+</body>
+</html>
