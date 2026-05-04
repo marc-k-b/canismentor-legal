@@ -57,7 +57,7 @@ Emsdettener Straße 10 <br>
 <h2>Kontakt</h2>
 
 <p>
-    <span class="contactMail"></span><br>
+    <span id="contactMailDe"></span><br>
     +4915678 330457
 </p>
 
@@ -91,7 +91,7 @@ Germany
 <h2>Contact</h2>
 
 <p>
-    <span class="contactMail"></span><br>
+    <span id="contactMailEn"></span><br>
     +4915678 330457
 </p>
 
@@ -120,7 +120,19 @@ Address as above
   link.href = "mailto:" + email;
   link.textContent = email;
 
-  document.getElementsByClassname("contactMail").appendChild(link);
+  document.getElementById("contactMailDe").appendChild(link);
+})();
+
+(function() {
+  const user = "canismentorapp";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("contactMailEn").appendChild(link);
 })();
 
 function switchLang(lang){
