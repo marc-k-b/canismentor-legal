@@ -57,7 +57,7 @@ Emsdettener Straße 10 <br>
 <h2>Kontakt</h2>
 
 <p>
-    <span id="email-de"></span><br>
+    <span class="contactMail"></span><br>
     +4915678 330457
 </p>
 
@@ -91,7 +91,7 @@ Germany
 <h2>Contact</h2>
 
 <p>
-    <span id="contactMail"></span><br>
+    <span class="contactMail"></span><br>
     +4915678 330457
 </p>
 
@@ -120,7 +120,7 @@ Address as above
   link.href = "mailto:" + email;
   link.textContent = email;
 
-  document.getElementById("contactMail").appendChild(link);
+  document.getElementsByClassname("contactMail").appendChild(link);
 })();
 
 function switchLang(lang){
