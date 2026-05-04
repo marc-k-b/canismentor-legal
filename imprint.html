@@ -61,21 +61,6 @@ Emsdettener Straße 10 <br>
     +4915678 330457
 </p>
 
-<script>
-(function() {
-  const user = "canismentorapp";
-  const domain = "gmail.com";
-  const email = user + "@" + domain;
-
-  const link = document.createElement("a");
-  link.href = "mailto:" + email;
-  link.textContent = email;
-
-  document.getElementById("email-de").appendChild(link);
-})();
-</script>
-<p>+4915678 330457</p>
-
 <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
 <p>
 Marc Busch<br>
@@ -105,22 +90,10 @@ Germany
 
 <h2>Contact</h2>
 
-<p><span id="email-en"></span></p>
-
-<script>
-(function() {
-  const user = "canismentorapp";
-  const domain = "gmail.com";
-  const email = user + "@" + domain;
-
-  const link = document.createElement("a");
-  link.href = "mailto:" + email;
-  link.textContent = email;
-
-  document.getElementById("email-en").appendChild(link);
-})();
-</script>
-<p>+4915678 330457</p>
+<p>
+    <span id="contactMail"></span><br>
+    +4915678 330457
+</p>
 
 <h2>Responsible for content pursuant to § 18 para. 2 of the German State Media Treaty (MStV)</h2>
 <p>
@@ -137,6 +110,19 @@ Address as above
 </div>
 
 <script>
+
+(function() {
+  const user = "canismentorapp";
+  const domain = "gmail.com";
+  const email = user + "@" + domain;
+
+  const link = document.createElement("a");
+  link.href = "mailto:" + email;
+  link.textContent = email;
+
+  document.getElementById("contactMail").appendChild(link);
+})();
+
 function switchLang(lang){
 
 document.querySelectorAll('.lang').forEach(el => {
