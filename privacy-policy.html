@@ -84,7 +84,7 @@ Sie bietet unter anderem folgende Funktionen:
   <li>KI-Analyse von Hundeverhalten anhand von Videos oder Texteingaben</li>
   <li>Erstellung individueller, KI-generierter Trainingspläne</li>
   <li>KI-gestützter Chat-Assistent für Trainingsfragen</li>
-  <li>Übungsbibliothek und Spiele mit Fortschrittsverfolgung</li>
+  <li>Übungsbibliothek mit Fortschrittsverfolgung</li>
   <li>KI-generierte Übungsbilder (Collagen)</li>
   <li>KI-Sprachausgabe (Text-to-Speech) für Trainingshinweise</li>
   <li>Push-Benachrichtigungen als Trainingserinnerungen</li>
@@ -162,12 +162,10 @@ Empfehlungen werden folgende Daten in Firebase Firestore gespeichert:
 </p>
 <ul>
   <li>Erstellte und absolvierte Trainingspläne</li>
-  <li>Übungsfortschritt und -bewertungen (zu schwer / okay / gut)</li>
+  <li>Übungsfortschritt und -bewertungen</li>
   <li>Video- und Textfeedback zu Trainingseinheiten</li>
   <li>Analyseergebnisse und erkannte Verhaltensmuster</li>
   <li>KI-Chat-Verlauf und daraus extrahierte Erkenntnisse</li>
-  <li>Gespielter Spieletitel, Spieldauer und optionales Feedback zu Spielen</li>
-  <li>Favoritenliste für Spiele</li>
   <li>Täglicher KI-Tipp</li>
   <li>Letztes Interaktionsdatum</li>
 </ul>
@@ -233,7 +231,7 @@ technische Nutzerkennung (UID).
 <h3>Firebase Firestore</h3>
 <p>
 Hauptdatenbank der App. Gespeichert werden: Nutzerprofil, Hundedaten,
-Trainingspläne, Analyseergebnisse, Chat-Verlauf, Spieldaten,
+Trainingspläne, Analyseergebnisse, Chat-Verlauf,
 Push-Benachrichtigungseinstellungen, FCM-Token, Zeitstempel der letzten
 Aktivität (<em>lastActiveAt</em>) sowie Cooldown-Einstellungen für KI-Funktionen.
 </p>
@@ -426,7 +424,7 @@ Key features include:
   <li>AI-based analysis of dog behavior from videos or text descriptions</li>
   <li>AI-generated personalized training plans</li>
   <li>AI chat assistant for training questions</li>
-  <li>Exercise library and games with progress tracking</li>
+  <li>Exercise library with progress tracking</li>
   <li>AI-generated exercise images (collages)</li>
   <li>AI text-to-speech for training guidance</li>
   <li>Push notification training reminders</li>
@@ -504,12 +502,10 @@ the following data is stored in Firebase Firestore:
 </p>
 <ul>
   <li>Created and completed training plans</li>
-  <li>Exercise progress and quick ratings (tough / ok / good)</li>
+  <li>Exercise progress and quick ratings</li>
   <li>Video and text feedback for training sessions</li>
   <li>Analysis results and identified behavior patterns</li>
   <li>AI chat history and extracted insights from chats</li>
-  <li>Games played, play duration, and optional feedback on games</li>
-  <li>Favorite games list</li>
   <li>Daily AI tip</li>
   <li>Last interaction date</li>
 </ul>
@@ -575,7 +571,7 @@ technical user identifier (UID).
 <h3>Firebase Firestore</h3>
 <p>
 The app's primary database. Stored data includes: user profile, dog data,
-training plans, analysis results, chat history, game data,
+training plans, analysis results, chat history, 
 push notification settings, FCM tokens, last activity timestamp
 (<em>lastActiveAt</em>), and AI-function cooldown settings.
 </p>
